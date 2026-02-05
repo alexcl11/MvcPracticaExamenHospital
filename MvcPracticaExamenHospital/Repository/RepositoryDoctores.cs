@@ -1,7 +1,26 @@
 ﻿using Microsoft.Data.SqlClient;
 using MvcPracticaExamenHospital.Models;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Threading.Tasks;
+
+#region SP_UPSERT_DOCTORES
+//ALTER PROCEDURE SP_UPSERT_DOCTOR
+//(@id int, @hospital int, @apellido nvarchar(50), @especialidad nvarchar(50), @salario int)
+//AS
+//	DECLARE @existe INT
+//	SELECT @existe=COUNT(DOCTOR_NO) FROM DOCTOR WHERE DOCTOR_NO=@id
+
+//	IF(@existe=1)
+//		BEGIN
+//			UPDATE DOCTOR SET HOSPITAL_COD=@hospital, APELLIDO = @apellido, ESPECIALIDAD = @especialidad, SALARIO = @salario where DOCTOR_NO=@id
+//		END
+//	ELSE
+//		BEGIN
+//			INSERT INTO DOCTOR VALUES (@hospital, @id, @apellido, @especialidad, @salario)
+//		END
+//GO
+#endregion
 
 namespace MvcPracticaExamenHospital.Repository
 {
