@@ -1,0 +1,16 @@
+﻿@model Doctor 
+
+<h1> Detalles Doctor </h1>
+<br />
+<hr />
+<br />
+<a asp-asp-controller="Doctores" asp-action="Index" class="btn btn-info">
+    Volver a Doctores
+</a>
+<ul class="list-group">
+    <li class="list-group-item ">ID: @Model.IdDoctor</li>
+    <li class="list-group-item ">Apellido: @Model.Apellido</li>
+    <li class="list-group-item ">Especialidad: @Model.Especialidad</li>
+    <li class="list-group-item ">Salario: @Model.Salario €</li>
+    <li class="list-group-item ">ID Hospital: @Model.IdHospital</li>
+</ul>

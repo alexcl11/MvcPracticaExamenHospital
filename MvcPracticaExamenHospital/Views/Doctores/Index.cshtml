@@ -1,0 +1,32 @@
+﻿@model List<Doctor>
+
+<h1>Doctores</h1>
+<br/>
+<hr />
+<br />
+
+<table class="table table-bordered">
+    <thead>
+        <th>Apellido</th>
+        <th>Especialidad</th>
+        <th></th>
+    </thead>
+    <tbody>
+        @foreach(Doctor d in Model)
+        {
+            <tr>
+                <td>@d.Apellido</td>
+                <td>@d.Especialidad</td>
+                <td>@Html.ActionLink("Detalles", "Detalles", "Doctores",
+                    new {id = @d.IdDoctor},
+                    new {@class = "btn btn-info"})
+                </td>
+                <td>@Html.ActionLink("Modificar", "Update", "Doctores",
+                    new {id = @d.IdDoctor},
+                    new {@class = "btn btn-warning"})
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
